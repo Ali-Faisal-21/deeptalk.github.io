@@ -40,6 +40,10 @@ html, body {
       flex-direction: column;
       height: 100dvh;
       over-flow: hidden;
+      border-left: 2px solid #0ff;
+      border-right: 2px solid #0ff;
+      box-shadow: 0 0 10px #0ff;
+      padding: 10px;
     }
     .messages {
       flex: 1;
@@ -267,3 +271,12 @@ html, body {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .chat-container {
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    padding: 10px 5px;
+  }
+}
+
