@@ -1,5 +1,9 @@
 export default async function handler(req, res) {
-  const body = req.body; // ✅ FIXED
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Only POST requests allowed" });
+  }
+
+  const body = req.body;
 
   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
@@ -12,9 +16,8 @@ export default async function handler(req, res) {
     body: JSON.stringify(body),
   });
 
-  // Handle possible errors
   if (!response.ok) {
-    const errorText = await response.text(); // 🔍 log response body
+    const errorText = await response.text();
     console.error("OpenRouter API Error:", errorText);
     return res.status(500).json({ error: "Failed to get response from OpenRouter" });
   }
