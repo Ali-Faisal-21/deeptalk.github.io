@@ -109,6 +109,8 @@ html, body {
       outline: none;
       height: auto;
       font-size: large;
+    box-shadow: 0 0 10px #0ff; 
+       
     }
     @media (max-width: 768px) {
       .sidebar {
