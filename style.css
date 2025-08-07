@@ -90,14 +90,7 @@ html, body {
       margin-top: 10px;
     }
 
-#send-button {
-  padding: 10px 15px;
-  background-color: #0ff;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
     #user-input {
       flex: 1;
       padding: 15px;
