@@ -67,25 +67,21 @@ const chatBox = document.getElementById('chat-box');
 
 
             showTyping();
-
-            const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Authorization": "Bearer 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",
-                    "HTTP-Referer": "https://yourwebsite.com",
-                    "X-Title": "DeepTalk Chatbot",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    "model": "deepseek/deepseek-r1:free",
-                    "messages": [
-                        {
-                            "role": "user",
-                            "content": text
-                        }
-                    ]
-                })
-            });
+const response = await fetch("https://deep-talk.vercel.app/api/ask", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    model: "deepseek/deepseek-r1:free",
+    messages: [
+      {
+        role: "user",
+        content: text
+      }
+    ]
+  })
+});
 
             const data = await response.json();
             const botReply = data.choices?.[0]?.message?.content || 'Error getting response';
