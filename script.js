@@ -67,11 +67,7 @@ const chatBox = document.getElementById('chat-box');
 
 
             showTyping();
-                document.getElementById("send-button").addEventListener("click", function () {
-  const userInput = document.getElementById("user-input");
-  sendMessage(userInput.value);
-});
-
+               
                 
 const response = await fetch("https://deeptalk-github-io.vercel.app/api/ask",  {
   method: "POST",
