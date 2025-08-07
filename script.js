@@ -67,7 +67,7 @@ const chatBox = document.getElementById('chat-box');
 
 
             showTyping();
-const response = await fetch("https://deep-talk.vercel.app/api/ask", {
+const response = await fetch("https://deeptalk-github-io.vercel.app/api/ask",  {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
