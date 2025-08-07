@@ -71,7 +71,7 @@ const chatBox = document.getElementById('chat-box');
             const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
                 method: "POST",
                 headers: {
-                    "Authorization": "Bearer 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",
+                    "Authorization": "Bearer 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",
                     "HTTP-Referer": "https://yourwebsite.com",
                     "X-Title": "DeepTalk Chatbot",
                     "Content-Type": "application/json"
