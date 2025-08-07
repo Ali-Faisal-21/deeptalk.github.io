@@ -83,6 +83,9 @@ html, body {
       padding: 20px;
       display: flex;
       background-color: #000;
+      position: sticky;
+      bottom: 0;
+      z-index: 10;
     }
     #user-input {
       flex: 1;
