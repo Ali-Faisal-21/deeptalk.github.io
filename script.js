@@ -103,12 +103,14 @@ const response = await fetch("https://deeptalk-github-io.vercel.app/api/ask",  {
         //     sendMessage(userInput.value);
         //   }
         // });
-        userInput.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault(); // stop newline
-                sendMessage(userInput.value); // send message
-            }
-        });
+       // iPhone/Safari fix: Send on Enter or Return key
+document.getElementById("user-input").addEventListener("keydown", function (e) {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault(); // prevent newline
+    const text = this.value;
+    sendMessage(text);
+  }
+});
 
 
         userInput.addEventListener('input', () => {
