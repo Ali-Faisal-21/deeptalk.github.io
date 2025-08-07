@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepTalk Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="mobile-header">DeepTalk</div>
+        <h2 class="neon-text">DeepTalk</h2>
+        <br>
+        <ul>
+            <li>Previous Text</li>
+            <br>
+            <li>Search Chat</li>
+            <br>
+            <li>Library</li>
+            <button id="clear-btn">Clear Chat</button>
+        </ul>
+
+        <div class="sidebar-footer">
+            Designed & Developed by Muhammad Ali
+        </div>
+    </div>
+    <button id="toggle-sidebar" class="toggle-btn">☰</button>
+
+    <div class="chat-container">
+        <div class="chat-container">
+            <div class="mobile-header">DeepTalk</div>
+            <div class="messages" id="chat-box"></div>
+
+        </div>
+        <div class="messages" id="chat-box"></div>
+        <div class="input-area">
+            <textarea id="user-input" placeholder="Type a message..." rows="1"></textarea>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
